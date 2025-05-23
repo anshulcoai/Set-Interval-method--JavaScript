@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Ball</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    @keyframes round
+    {
+        from{rotate: 0deg;}
+        to{ rotate: 3600deg;}
+    }
+    
+    #ball {
+      width: 50px;
+      height: 50px;
+      box-shadow: 40px 40px 100px gray;
+      background: linear-gradient(green, yellow, yellowgreen, darkgreen, black) ;
+      border-radius: 50%;
+      position: absolute;
+      animation-name: round;
+      animation-duration: 0.3s;
+      animation-iteration-count: infinite;
+      top: 50%;
+      left: 0;
+      &:hover{
+        animation-play-state: paused;
+        cursor: pointer;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div id="ball"></div>
+
+  <script>
+    const ball = document.getElementById("ball");
+    let position = 0;
+    const ballWidth = 50;
+    const speed = 5;
+    const intervalTime = 50;
+
+    function moveBall() {
+      const screenWidth = window.innerWidth;
+      position += speed;
+      if (position > screenWidth) {
+        position = -ballWidth; 
+      }
+
+      ball.style.left = `${position}px`;
+      }
+
+    setInterval(moveBall,10);
+  </script>
+</body>
+</html>

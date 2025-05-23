@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working on set Interval() method</title>
+</head>
+<style>
+  #bk1{
+    background-color: lightgray;
+    height: 13px;
+    width: 70%;
+  }
+  
+  #loading_bar{
+    width: 10px;
+    height: 13px;
+    background-color: green;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  p{
+    font-size:20px;
+  }
+
+
+  button{
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: black;
+        color: whitesmoke;
+    }
+  }
+  
+  body{
+    font-size: 25px;
+  }
+
+ #div2{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+ }
+
+</style>
+<body>
+    <h1>Make a digital clock</h1>
+    <h2 id="demo1"></h2>
+     <br>
+   <h1>Java Script progress Bar</h1>
+   <div id="bk1">
+    <div id="loading_bar"></div>
+   </div>
+   <br>
+   <p id="para1"></p>
+   <button onclick="go()">Load the bar </button>
+  
+    <p id="para2">10</p> 
+    <button onclick="decrease()">Start the Count Down</button>
+<br>
+<br>
+    <div id="div1">
+    Hello&nbsp;&nbsp;<span id="span1">0</span>
+    </div>
+    <button onclick="update()">Update the number</button>
+<br>
+<br>
+
+    <div id="div2">
+    </div>
+    
+  <p id="para3"></p>
+  
+    
+  <h1>Make a digital Clock</h1>
+  <p id="clock"></p>
+ 
+
+
+
+
+
+  
+    <script src="index.js"></script>
+</body>
+</html>
